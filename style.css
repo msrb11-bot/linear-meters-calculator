@@ -14,7 +14,7 @@ body {
 ========================= */
 .container {
   max-width: 450px;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 25px 20px;
   background: #fff;
   border-radius: 15px;
@@ -31,7 +31,7 @@ body {
 }
 
 .logo {
-  max-width: 120px;
+  max-width: 300px;
   height: auto;
   display: inline-block;
 }
@@ -73,18 +73,21 @@ input[type="number"]:focus {
 }
 
 /* =========================
-   BUTTONS
+   BUTTONS - STACKED VERTICAL
 ========================= */
 button,
 .btn {
+  display: block;        /* Each button on its own line */
+  width: 100%;           /* Full width of container */
   padding: 12px 28px;
-  margin: 12px 0;
+  margin: 12px 0;        /* Space between buttons */
   font-size: 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   color: white;
   transition: all 0.2s ease;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 /* Core Selection Buttons */
@@ -112,6 +115,16 @@ button:active {
 }
 
 /* =========================
+   SPACING FOR RESULTS
+========================= */
+button + .result-box,
+button + #result,
+button + #resultCustom {
+  margin-top: 25px;  /* More space below the button */
+  display: block;    /* Ensure it stays on its own line */
+}
+
+/* =========================
    RESULTS
 ========================= */
 .result-box,
@@ -122,7 +135,6 @@ button:active {
   padding: 10px 16px;
   font-size: 18px;
   color: #0d47a1;
-  margin-top: 15px;
   display: inline-block;
 }
 
