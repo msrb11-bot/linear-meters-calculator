@@ -141,7 +141,7 @@ button + #resultCustom {
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .container {
     margin: 20px;
     padding: 20px;
