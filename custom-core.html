@@ -6,14 +6,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="logo-container">
+    <img src="pxlogo.png" alt="Site Logo" class="logo">
+  </div>
   <div class="container">
     <h1>Custom Core Calculator</h1>
     <input id="core" type="number" placeholder="Core Diameter (mm)">
     <input id="diameter" type="number" placeholder="Outer Diameter (mm)">
     <input id="thickness" type="number" placeholder="Material Thickness (microns)">
-    <button onclick="calculateCustomCore()">Calculate</button>
-    <h2 id="resultCustom"></h2>
+
+    <div id="resultCustom" class="result-box">Length: – meters</div>
+
+    
+    <a href="index.html" class="btn btn-gray">Back</a>
   </div>
   <script src="script.js"></script>
+  <script>
+    document.getElementById("core").addEventListener("input", calculateCustomCore);
+    document.getElementById("diameter").addEventListener("input", calculateCustomCore);
+    document.getElementById("thickness").addEventListener("input", calculateCustomCore);
+  </script>
 </body>
 </html>
